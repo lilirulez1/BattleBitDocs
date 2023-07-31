@@ -1,0 +1,119 @@
+:root {
+    --red: #ed8796;
+    --green: #a6e3a1;
+    --sapphire: #74c7ec;
+    --mauve: #cba6f7;
+    --teal: #94e2d5;
+    --dark-teal: #89cdc2;
+    --blue: #89b4fa;
+    --sky: #89dceb;
+    --yellow: #f9e2af;
+    --peach: #fab387;
+    --maroon: #eba0ac;
+
+    --crust: #11111b;
+    --mantle: #181825;
+    --base: #1e1e2e;
+    --text-color: #cdd6f4;
+    --subtext-1-color: #bac2de;
+    --subtext-2-color: #a6adc8;
+    --overlay-1-color: #9399b2;
+    --overlay-2-color: #7f849c;
+    --overlay-3-color: #6c7086;
+    --surface-1-color: #585b70;
+    --surface-2-color: #45475a;
+    --surface-3-color: #313244;
+    
+    font-family: 'Segoe UI';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--base);
+    color: var(--text-color);
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    justify-self: center;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 2px 2px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    height: 44px;
+    border: 1px solid var(--overlay-3-color);
+    color: var(--text-color);
+    background-color: var(--surface-3-color);
+    font-weight: 500;
+    transition: all 0.2s;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--surface-2-color);
+}
+
+a {
+    padding: 2px 0;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ul > li {
+    list-style: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--overlay-3-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid var(--overlay-3-color);
+    text-align: left;
+    padding: 8px;
+}
+
+#app {
+    height: 100vh;
+}
