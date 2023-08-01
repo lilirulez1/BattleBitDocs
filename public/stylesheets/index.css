@@ -199,6 +199,17 @@ code {
     box-sizing: border-box;
 }
 
+.enum-type {
+    display: block;
+    width: fit-content;
+    border: 1px solid var(--surface-2-color);
+    background-color: var(--mantle);
+    font-size: 12px;
+    border-radius: 100vh;
+    padding: 5px 9px;
+    margin: 8px 0 8px 0px;
+}
+
 .line {
     white-space: normal;
     word-spacing: normal;
