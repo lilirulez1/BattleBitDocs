@@ -212,34 +212,15 @@
                                     <p>The server listener class.</p>
 
                                     <hr>
-                                    <h1>Usage</h1>
-
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">class</span> <span class="class">Program</span>
-<span class="delimiter">{</span>
-    <span class="keyword">static</span> <span class="keyword">void</span> <span class="class">Main</span><span class="delimiter">(</span><span class="builtin">string</span><span class="delimiter">[]</span> <span>args</span><span class="delimiter">)</span>
-    <span class="delimiter">{</span>
-        <span class="keyword">var</span> <span>listener</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="class">ServerListener</span><span class="delimiter"><</span><span class="class">MyPlayer</span><span class="delimiter">>();</span>
-        <span>listener</span><span class="delimiter">.</span><span class="function">Start</span><span class="delimiter">(</span><span class="number">29294</span><span class="delimiter">);</span>
-        
-        <span>Thread</span><span class="delimiter">.</span><span class="function">Sleep</span><span class="delimiter">(</span><span class="number">-1</span><span class="delimiter">);</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
-
-                                    </div>
-
-                                    <hr>
-                                    <h1>Examples</h1>
+                                    <h1>Example</h1>
                                     
                                     <div class="language-csharp">
                                         <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
+                                        <pre><code><span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">;</span>
+<span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span><span class="delimiter">;</span>
+<span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span><span class="delimiter">.</span><span>Enums</span><span class="delimiter">;</span>
+<span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Server</span><span class="delimiter">;</span>
+<span class="keyword">using</span> <span>System</span><span class="delimiter">.</span><span>Numerics</span><span class="delimiter">;</span>
 
 <span class="keyword">class</span> <span class="class">Program</span>
 <span class="delimiter">{</span>
@@ -254,23 +235,184 @@
 
     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">async</span> <span class="keyword">Task</span><span class="delimiter"><</span><span class="class">PlayerStats</span><span class="delimiter">></span> <span class="function">OnGetPlayerStats</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">SteamID</span><span class="delimiter">,</span> <span class="class">PlayerStats</span> <span class="param">Stats</span><span class="delimiter">)</span>
     <span class="delimiter">{</span>
-        <span class="param">Stats</span><span class="delimiter">.</span><span>Progress</span><span class="delimiter">.</span><span>Rank</span> <span class="operator">=</span> <span class="number">200</span><span class="delimiter">;</span>
-        <span class="keyword">return</span> <span>Stats</span><span class="delimiter">;</span>
+        <span class="keyword">return</span> <span class="param">Stats</span><span class="delimiter">;</span>
     <span class="delimiter">}</span>
 <span class="delimiter">}</span>
-</code></pre>
 
+<span class="keyword">class</span> <span class="class">MyPlayer</span> <span class="delimiter">:</span> <span class="class">Player</span>
+<span class="delimiter">{</span>
+    
+<span class="delimiter">}</span>
+</span></code></pre>
                                     </div>
 
                                     <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Properties</h1>
 
                                     <div class="language-csharp">
                                         <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">bool</span> <span>IsListening</span></code></pre>
+                                    </div>
 
-                                        <pre><code><span class="comment">// This is 892 lines of code, no fucking way I'm syntax highlighting this manually</span>
-<span class="comment">// https://github.com/MrOkiDoki/BattleBit-Community-Server-API/blob/main/BattleBitAPI/Server/ServerListener.cs</span>
-<span class="comment">// Once I get an automatic syntax highlighter working I'll add this</span></code></pre>
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">bool</span> <span>IsDisposed</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">int</span> <span>ListeningPort</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Methods</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Start</span><span class="delimiter">(</span><span class="class">IPAddress</span> <span class="param">bindIP</span><span class="delimiter">,</span> <span class="builtin">int</span> <span class="param">port</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Start</span><span class="delimiter">(</span><span class="builtin">int</span> <span class="param">port</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Stop</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Dispose</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Events</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">GameServer</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnGameServerConnected</span>
+                                                  
+<span class="comment">// GameServer - The <a href="./game-server.html">Game Server</a> connecting</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">GameServer</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnGameServerReconnected</span>
+                                            
+<span class="comment">// GameServer - The <a href="./game-server.html">Game Server</a> reconnecting</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">GameServer</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnGameServerDisconnected</span>
+                                            
+<span class="comment">// GameServer - The <a href="./game-server.html">Game Server</a> disconnecting</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerConnected</span>
+                                        
+<span class="comment">// TPlayer - The player connecting</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerDisconnected</span>
+                                        
+<span class="comment">// TPlayer - The player disconnecting</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="class">ChatChannel</span><span class="delimiter">,</span> <span class="builtin">string</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerTypedMessage</span>
+                                        
+<span class="comment">// TPlayer - The player who sent the message</span>
+<span class="comment">// ChatChannel - The <a href="./chat-channel.html">Channel</a> the message was sent to</span>
+<span class="comment">// string - The message</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="builtin">Vector3</span><span class="delimiter">,</span> <span class="class">TPlayer</span><span class="delimiter">,</span> <span class="builtin">Vector3</span><span class="delimiter">,</span> <span class="builtin">string</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnAPlayerKilledAnotherPlayer</span>
+                                        
+<span class="comment">// TPlayer - The killer</span>
+<span class="comment">// Vector3 - The killer's position</span>
+<span class="comment">// TPlayer - The victim</span>
+<span class="comment">// Vector3 - The victim's position</span>
+<span class="comment">// string - The tool used to kill the player</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="builtin">ulong</span><span class="delimiter">,</span> <span class="class">PlayerStats</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter"><</span><span class="class">PlayerStats</span><span class="delimiter">></span><span class="delimiter">></span> <span class="method">OnGetPlayerStats</span>
+                                        
+<span class="comment">// ulong - The player's Steam ID</span>
+<span class="comment">// PlayerStats - The official <a href="./player-stats.html">Stats</a> of the player</span>
+
+<span class="comment">// Return: The player's stats</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="builtin">ulong</span><span class="delimiter">,</span> <span class="class">PlayerStats</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnSavePlayerStats</span>
+                                        
+<span class="comment">// ulong - The player's Steam ID</span>
+<span class="comment">// PlayerStats - The <a href="./player-stats.html">Stats</a> to save</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="class">GameRole</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter"><</span><span class="builtin">bool</span><span class="delimiter">></span><span class="delimiter">></span> <span class="method">OnPlayerRequestingToChangeRole</span>
+                                        
+<span class="comment">// TPlayer - Player who's requesting to change role</span>
+<span class="comment">// GameRole - The <a href="./roles.html">Role</a> the player is requesting</span>
+
+<span class="comment">// Return: If the player can change roles</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">Tplayer</span><span class="delimiter">,</span> <span class="class">GameRole</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerChangedRole</span>
+                                        
+<span class="comment">// TPlayer - Player who changed their role</span>
+<span class="comment">// GameRole - The players new <a href="./roles.html">Role</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">Tplayer</span><span class="delimiter">,</span> <span class="class">Squads</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerJoinedASquad</span>
+                                        
+<span class="comment">// TPlayer - Player who joined the squad</span>
+<span class="comment">// Squads - The players new <a href="./squads.html">Squad</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">Tplayer</span><span class="delimiter">,</span> <span class="class">Squads</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerLeftSquad</span>
+                                        
+<span class="comment">// TPlayer - Player who left the squad</span>
+<span class="comment">// Squads - The players old <a href="./squads.html">Squad</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">Tplayer</span><span class="delimiter">,</span> <span class="class">Team</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter">></span> <span class="method">OnPlayerChangedTeam</span>
+                                        
+<span class="comment">// TPlayer - Player who changed team</span>
+<span class="comment">// Team - The players new <a href="./team.html">Team</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public</span> <span class="method">Func</span><span class="delimiter"><</span><span class="class">TPlayer</span><span class="delimiter">,</span> <span class="class">PlayerSpawnRequest</span><span class="delimiter">,</span> <span class="class">Task</span><span class="delimiter"><</span><span class="class">PlayerSpawnRequest</span><span class="delimiter">></span><span class="delimiter">></span> <span class="method">OnPlayerSpawning</span>
+                                        
+<span class="comment">// TPlayer - Player requesting to spawn</span>
+<span class="comment">// PlayerSpawnRequest - The <a href="./player-spawn-request.html">Spawn Request</a></span>
+
+<span class="comment">// Return: The updated spawn request</span></code></pre>
                                     </div>
                                 </main>
                                 <footer class="doc-footer">

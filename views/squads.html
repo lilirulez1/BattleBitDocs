@@ -210,117 +210,207 @@
                                 <main class="doc-main">
                                     <h1>Squads</h1>
 
-                                    <p>Used in <a href="./player.html">Player</a> and <a href="./server-listener.html">Server Listener</a>.</p>
+                                    <p>Used in the <a href="./player.html">Player</a> and <a href="./server-listener.html">Server Listener</a> class.</p>
 
                                     <hr>
-                                    <h1>Usage</h1>
- 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
+                                    <h1>Enum Types</h1>
 
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">private static async Task</span> <span class="function">OnPlayerJoinedASquad</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">Squads</span> <span class="param">squad</span><span class="delimiter">)</span>
-<span class="delimiter">{</span>
-    
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">NoSquad</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
                                     </div>
-
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">private static async Task</span> <span class="function">OnPlayerLeftSquad</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">Squads</span> <span class="param">squad</span><span class="delimiter">)</span>
-<span class="delimiter">{</span>
-    
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Alpha</span> <span class="operator">=</span> <span class="number">1</span></code></pre>
                                     </div>
-
-                                    <hr>
-                                    <h1>Source Code</h1>
-
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// BattleBitAPI/Common/Enums/Squads.cs</span>
-
-<span class="keyword">namespace</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public enum</span> <span class="class">Squads</span> <span class="delimiter">:</span> <span class="builtin">int</span>
-    <span class="delimiter">{</span>
-        <span class="class">NoSquad</span> <span class="operator">=</span> <span class="number">0</span><span class="delimiter">,</span>
-    
-        <span class="class">Alpha</span> <span class="operator">=</span> <span class="number">1</span><span class="delimiter">,</span>
-        <span class="class">Bravo</span> <span class="operator">=</span> <span class="number">2</span><span class="delimiter">,</span>
-        <span class="class">Charlie</span> <span class="operator">=</span> <span class="number">3</span><span class="delimiter">,</span>
-        <span class="class">Delta</span> <span class="operator">=</span> <span class="number">4</span><span class="delimiter">,</span>
-        <span class="class">Echo</span> <span class="operator">=</span> <span class="number">5</span><span class="delimiter">,</span>
-        <span class="class">Foxtrot</span> <span class="operator">=</span> <span class="number">6</span><span class="delimiter">,</span>
-        <span class="class">Golf</span> <span class="operator">=</span> <span class="number">7</span><span class="delimiter">,</span>
-        <span class="class">Hotel</span> <span class="operator">=</span> <span class="number">8</span><span class="delimiter">,</span>
-        <span class="class">India</span> <span class="operator">=</span> <span class="number">9</span><span class="delimiter">,</span>
-        <span class="class">Juliett</span> <span class="operator">=</span> <span class="number">10</span><span class="delimiter">,</span>
-        <span class="class">Kilo</span> <span class="operator">=</span> <span class="number">11</span><span class="delimiter">,</span>
-        <span class="class">Lima</span> <span class="operator">=</span> <span class="number">12</span><span class="delimiter">,</span>
-        <span class="class">Mike</span> <span class="operator">=</span> <span class="number">13</span><span class="delimiter">,</span>
-        <span class="class">November</span> <span class="operator">=</span> <span class="number">14</span><span class="delimiter">,</span>
-        <span class="class">Oscar</span> <span class="operator">=</span> <span class="number">15</span><span class="delimiter">,</span>
-        <span class="class">Papa</span> <span class="operator">=</span> <span class="number">16</span><span class="delimiter">,</span>
-        <span class="class">Quebec</span> <span class="operator">=</span> <span class="number">17</span><span class="delimiter">,</span>
-        <span class="class">Romeo</span> <span class="operator">=</span> <span class="number">18</span><span class="delimiter">,</span>
-        <span class="class">Sierra</span> <span class="operator">=</span> <span class="number">19</span><span class="delimiter">,</span>
-        <span class="class">Tango</span> <span class="operator">=</span> <span class="number">20</span><span class="delimiter">,</span>
-        <span class="class">Uniform</span> <span class="operator">=</span> <span class="number">21</span><span class="delimiter">,</span>
-        <span class="class">Whiskey</span> <span class="operator">=</span> <span class="number">22</span><span class="delimiter">,</span>
-        <span class="class">Xray</span> <span class="operator">=</span> <span class="number">23</span><span class="delimiter">,</span>
-        <span class="class">Yankee</span> <span class="operator">=</span> <span class="number">24</span><span class="delimiter">,</span>
-        <span class="class">Zulu</span> <span class="operator">=</span> <span class="number">25</span><span class="delimiter">,</span>
-        <span class="class">Ash</span> <span class="operator">=</span> <span class="number">26</span><span class="delimiter">,</span>
-        <span class="class">Baker</span> <span class="operator">=</span> <span class="number">27</span><span class="delimiter">,</span>
-        <span class="class">Cast</span> <span class="operator">=</span> <span class="number">28</span><span class="delimiter">,</span>
-        <span class="class">Diver</span> <span class="operator">=</span> <span class="number">29</span><span class="delimiter">,</span>
-        <span class="class">Eagle</span> <span class="operator">=</span> <span class="number">30</span><span class="delimiter">,</span>
-        <span class="class">Fisher</span> <span class="operator">=</span> <span class="number">31</span><span class="delimiter">,</span>
-        <span class="class">George</span> <span class="operator">=</span> <span class="number">32</span><span class="delimiter">,</span>
-        <span class="class">Hanover</span> <span class="operator">=</span> <span class="number">33</span><span class="delimiter">,</span>
-        <span class="class">Ice</span> <span class="operator">=</span> <span class="number">34</span><span class="delimiter">,</span>
-        <span class="class">Jake</span> <span class="operator">=</span> <span class="number">35</span><span class="delimiter">,</span>
-        <span class="class">King</span> <span class="operator">=</span> <span class="number">36</span><span class="delimiter">,</span>
-        <span class="class">Lash</span> <span class="operator">=</span> <span class="number">37</span><span class="delimiter">,</span>
-        <span class="class">Mule</span> <span class="operator">=</span> <span class="number">38</span><span class="delimiter">,</span>
-        <span class="class">Neptune</span> <span class="operator">=</span> <span class="number">39</span><span class="delimiter">,</span>
-        <span class="class">Ostend</span> <span class="operator">=</span> <span class="number">40</span><span class="delimiter">,</span>
-        <span class="class">Page</span> <span class="operator">=</span> <span class="number">41</span><span class="delimiter">,</span>
-        <span class="class">Quail</span> <span class="operator">=</span> <span class="number">42</span><span class="delimiter">,</span>
-        <span class="class">Raft</span> <span class="operator">=</span> <span class="number">43</span><span class="delimiter">,</span>
-        <span class="class">Scout</span> <span class="operator">=</span> <span class="number">44</span><span class="delimiter">,</span>
-        <span class="class">Tare</span> <span class="operator">=</span> <span class="number">45</span><span class="delimiter">,</span>
-        <span class="class">Unit</span> <span class="operator">=</span> <span class="number">46</span><span class="delimiter">,</span>
-        <span class="class">William</span> <span class="operator">=</span> <span class="number">47</span><span class="delimiter">,</span>
-        <span class="class">Xaintrie</span> <span class="operator">=</span> <span class="number">48</span><span class="delimiter">,</span>
-        <span class="class">Yoke</span> <span class="operator">=</span> <span class="number">49</span><span class="delimiter">,</span>
-        <span class="class">Zebra</span> <span class="operator">=</span> <span class="number">50</span><span class="delimiter">,</span>
-        <span class="class">Ace</span> <span class="operator">=</span> <span class="number">51</span><span class="delimiter">,</span>
-        <span class="class">Beer</span> <span class="operator">=</span> <span class="number">52</span><span class="delimiter">,</span>
-        <span class="class">Cast2</span> <span class="operator">=</span> <span class="number">53</span><span class="delimiter">,</span>
-        <span class="class">Duff</span> <span class="operator">=</span> <span class="number">54</span><span class="delimiter">,</span>
-        <span class="class">Edward</span> <span class="operator">=</span> <span class="number">55</span><span class="delimiter">,</span>
-        <span class="class">Freddy</span> <span class="operator">=</span> <span class="number">56</span><span class="delimiter">,</span>
-        <span class="class">Gustav</span> <span class="operator">=</span> <span class="number">57</span><span class="delimiter">,</span>
-        <span class="class">Henry</span> <span class="operator">=</span> <span class="number">58</span><span class="delimiter">,</span>
-        <span class="class">Ivar</span> <span class="operator">=</span> <span class="number">59</span><span class="delimiter">,</span>
-        <span class="class">Jazz</span> <span class="operator">=</span> <span class="number">60</span><span class="delimiter">,</span>
-        <span class="class">Key</span> <span class="operator">=</span> <span class="number">61</span><span class="delimiter">,</span>
-        <span class="class">Lincoln</span> <span class="operator">=</span> <span class="number">62</span><span class="delimiter">,</span>
-        <span class="class">Mary</span> <span class="operator">=</span> <span class="number">63</span><span class="delimiter">,</span>
-        <span class="class">Nora</span> <span class="operator">=</span> <span class="number">64</span><span class="delimiter">,</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Bravo</span> <span class="operator">=</span> <span class="number">2</span></code></pre>
                                     </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Charlie</span> <span class="operator">=</span> <span class="number">3</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Delta</span> <span class="operator">=</span> <span class="number">4</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Echo</span> <span class="operator">=</span> <span class="number">5</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Foxtrot</span> <span class="operator">=</span> <span class="number">6</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Golf</span> <span class="operator">=</span> <span class="number">7</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Hotel</span> <span class="operator">=</span> <span class="number">8</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">India</span> <span class="operator">=</span> <span class="number">9</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Juliett</span> <span class="operator">=</span> <span class="number">10</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Kilo</span> <span class="operator">=</span> <span class="number">11</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Lima</span> <span class="operator">=</span> <span class="number">12</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Mike</span> <span class="operator">=</span> <span class="number">13</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">November</span> <span class="operator">=</span> <span class="number">14</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Oscar</span> <span class="operator">=</span> <span class="number">15</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Papa</span> <span class="operator">=</span> <span class="number">16</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Quebec</span> <span class="operator">=</span> <span class="number">17</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Romeo</span> <span class="operator">=</span> <span class="number">18</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Sierra</span> <span class="operator">=</span> <span class="number">19</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Tango</span> <span class="operator">=</span> <span class="number">20</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Uniform</span> <span class="operator">=</span> <span class="number">21</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Whiskey</span> <span class="operator">=</span> <span class="number">22</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Xray</span> <span class="operator">=</span> <span class="number">23</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Yankee</span> <span class="operator">=</span> <span class="number">24</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Zulu</span> <span class="operator">=</span> <span class="number">25</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ash</span> <span class="operator">=</span> <span class="number">26</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Baker</span> <span class="operator">=</span> <span class="number">27</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Cast</span> <span class="operator">=</span> <span class="number">28</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Diver</span> <span class="operator">=</span> <span class="number">29</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Eagle</span> <span class="operator">=</span> <span class="number">30</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Fisher</span> <span class="operator">=</span> <span class="number">31</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">George</span> <span class="operator">=</span> <span class="number">32</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Hanover</span> <span class="operator">=</span> <span class="number">33</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ice</span> <span class="operator">=</span> <span class="number">34</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Jake</span> <span class="operator">=</span> <span class="number">35</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">King</span> <span class="operator">=</span> <span class="number">36</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Lash</span> <span class="operator">=</span> <span class="number">37</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Mule</span> <span class="operator">=</span> <span class="number">38</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Neptune</span> <span class="operator">=</span> <span class="number">39</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ostend</span> <span class="operator">=</span> <span class="number">40</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Page</span> <span class="operator">=</span> <span class="number">41</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Quail</span> <span class="operator">=</span> <span class="number">42</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Raft</span> <span class="operator">=</span> <span class="number">43</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Scout</span> <span class="operator">=</span> <span class="number">44</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Tare</span> <span class="operator">=</span> <span class="number">45</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Unit</span> <span class="operator">=</span> <span class="number">46</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">William</span> <span class="operator">=</span> <span class="number">47</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Xaintrie</span> <span class="operator">=</span> <span class="number">48</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Yoke</span> <span class="operator">=</span> <span class="number">49</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Zebra</span> <span class="operator">=</span> <span class="number">50</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ace</span> <span class="operator">=</span> <span class="number">51</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Beer</span> <span class="operator">=</span> <span class="number">52</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Cast2</span> <span class="operator">=</span> <span class="number">53</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Duff</span> <span class="operator">=</span> <span class="number">54</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Edward</span> <span class="operator">=</span> <span class="number">55</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Freddy</span> <span class="operator">=</span> <span class="number">56</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Gustav</span> <span class="operator">=</span> <span class="number">57</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Henry</span> <span class="operator">=</span> <span class="number">58</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ivar</span> <span class="operator">=</span> <span class="number">59</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Jazz</span> <span class="operator">=</span> <span class="number">60</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Key</span> <span class="operator">=</span> <span class="number">61</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Lincoln</span> <span class="operator">=</span> <span class="number">62</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Mary</span> <span class="operator">=</span> <span class="number">63</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Nora</span> <span class="operator">=</span> <span class="number">64</span></code></pre>
+                                    </div>
+                                    
                                 </main>
                                 <footer class="doc-footer">
                                     <div class="prev-next">

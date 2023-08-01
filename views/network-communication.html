@@ -210,45 +210,69 @@
                                 <main class="doc-main">
                                     <h1>Network Communication</h1>
 
-                                    <p>Used in <a href="./server-listener.html">Server Listener</a> and <a href="./game-server.html">Game Server</a>.</p>
+                                    <p>Used in the <a href="./server-listener.html">Server Listener</a> and <a href="./game-server.html">Game Server</a> class. I don't really know why you would need this.</p>
 
                                     <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Enum Types</h1>
 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// BattleBitAPI/Networking/NetworkCommunication.cs</span>
-
-<span class="keyword">namespace</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public enum</span> <span class="class">Team</span> <span class="delimiter">:</span> <span class="builtin">byte</span>
-    <span class="delimiter">{</span>
-        <span class="class">None</span> <span class="operator">=</span> <span class="number">0</span><span class="delimiter">,</span>
-        <span class="class">Hail</span> <span class="operator">=</span> <span class="number">1</span><span class="delimiter">,</span>
-        <span class="class">Accepted</span> <span class="operator">=</span> <span class="number">2</span><span class="delimiter">,</span>
-        <span class="class">Denied</span> <span class="operator">=</span> <span class="number">3</span><span class="delimiter">,</span>
-
-        <span class="class">ExecuteCommand</span> <span class="operator">=</span> <span class="number">10</span><span class="delimiter">,</span>
-        <span class="class">SendPlayerStats</span> <span class="operator">=</span> <span class="number">11</span><span class="delimiter">,</span>
-        <span class="class">SpawnPlayer</span> <span class="operator">=</span> <span class="number">12</span><span class="delimiter">,</span>
-        
-        <span class="class">PlayerConnected</span> <span class="operator">=</span> <span class="number">50</span><span class="delimiter">,</span>
-        <span class="class">PlayerDisconnected</span> <span class="operator">=</span> <span class="number">51</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerTypedMessage</span> <span class="operator">=</span> <span class="number">52</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerKilledAnotherPlayer</span> <span class="operator">=</span> <span class="number">53</span><span class="delimiter">,</span>
-        <span class="class">GetPlayerStats</span> <span class="operator">=</span> <span class="number">54</span><span class="delimiter">,</span>
-        <span class="class">SavePlayerStats</span> <span class="operator">=</span> <span class="number">55</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerAskingToChangeRole</span> <span class="operator">=</span> <span class="number">56</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerChangedRole</span> <span class="operator">=</span> <span class="number">57</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerJoinedASquad</span> <span class="operator">=</span> <span class="number">58</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerLeftSquad</span> <span class="operator">=</span> <span class="number">59</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerChangedTeam</span> <span class="operator">=</span> <span class="number">60</span><span class="delimiter">,</span>
-        <span class="class">OnPlayerRequestingToSpawn</span> <span class="operator">=</span> <span class="number">61</span><span class="delimiter">,</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">None</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
                                     </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Hail</span> <span class="operator">=</span> <span class="number">1</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Accepted</span> <span class="operator">=</span> <span class="number">2</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Denied</span> <span class="operator">=</span> <span class="number">3</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">ExecuteCommand</span> <span class="operator">=</span> <span class="number">10</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SendPlayerStats</span> <span class="operator">=</span> <span class="number">11</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SpawnPlayer</span> <span class="operator">=</span> <span class="number">12</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PlayerConnected</span> <span class="operator">=</span> <span class="number">50</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PlayerDisconnected</span> <span class="operator">=</span> <span class="number">51</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerTypedMessage</span> <span class="operator">=</span> <span class="number">52</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerKilledAnotherPlayer</span> <span class="operator">=</span> <span class="number">53</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">GetPlayerStats</span> <span class="operator">=</span> <span class="number">54</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SavePlayerStats</span> <span class="operator">=</span> <span class="number">55</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerAskingToChangeRole</span> <span class="operator">=</span> <span class="number">56</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerChangedRole</span> <span class="operator">=</span> <span class="number">57</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerJoinedASquad</span> <span class="operator">=</span> <span class="number">58</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerLeftSquad</span> <span class="operator">=</span> <span class="number">59</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerChangedTeam</span> <span class="operator">=</span> <span class="number">60</span></code></pre>
+                                    </div>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OnPlayerRequestingToSpawn</span> <span class="operator">=</span> <span class="number">61</span></code></pre>
+                                    </div>
+                                    
                                 </main>
                                 <footer class="doc-footer">
                                     <div class="prev-next">

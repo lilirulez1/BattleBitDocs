@@ -212,104 +212,157 @@
                                     <p>The player class.</p>
 
                                     <hr>
-                                    <h1>Usage</h1>
-                                    
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-                                    <pre><code><span class="comment">// Program.cs</span>
-<span class="keyword">class</span> <span class="class">MyPlayer</span> <span class="delimiter">:</span> <span class="class">Player</span>
-<span class="delimiter">{</span>
-    
-<span class="delimiter">}</span>
-</span></code></pre>
-                                    </div>
-
-                                    <hr>
                                     <h1>Example</h1>
                                     
                                     <div class="language-csharp">
                                         <span class="lang">C#</span>
                                     <pre><code><span class="comment">// Program.cs</span>
+
+<span class="keyword">class</span> <span class="class">Program</span>
+<span class="delimiter">{</span>
+    <span class="keyword">static</span> <span class="keyword">void</span> <span class="class">Main</span><span class="delimiter">(</span><span class="builtin">string</span><span class="delimiter">[]</span> <span>args</span><span class="delimiter">)</span>
+    <span class="delimiter">{</span>
+        <span class="keyword">var</span> <span>listener</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="class">ServerListener</span><span class="delimiter"><</span><span class="class">MyPlayer</span><span class="delimiter">>();</span>
+        <span>listener</span><span class="delimiter">.</span><span class="method">OnPlayerConnected</span> <span class="operator">+=</span> <span class="method">OnPlayerConnected</span><span class="delimiter">;</span>
+        <span>listener</span><span class="delimiter">.</span><span class="function">Start</span><span class="delimiter">(</span><span class="number">29294</span><span class="delimiter">);</span>
+        
+        <span>Thread</span><span class="delimiter">.</span><span class="function">Sleep</span><span class="delimiter">(</span><span class="number">-1</span><span class="delimiter">);</span>
+    <span class="delimiter">}</span>
+
+    <span class="keyword">private static async Task</span> <span class="function">OnPlayerConnected</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">Player</span><span class="delimiter">)</span>
+    <span class="delimiter">{</span>
+        <span class="param">Player</span><span class="delimiter">.</span><span>ShavedTheirNuts</span> <span class="operator">=</span> <span class="builtin">false</span><span class="delimiter">;</span>
+    <span class="delimiter">}</span>
+<span class="delimiter">}</span>
+
 <span class="keyword">class</span> <span class="class">MyPlayer</span> <span class="delimiter">:</span> <span class="class">Player</span>
 <span class="delimiter">{</span>
-    <span class="keyword">public</span> <span class="keyword">bool</span> <span>ShavedTheirNuts</span> <span class="operator">=</span> <span class="builtin">false</span><span class="delimiter">;</span>
+    <span class="keyword">public</span> <span class="keyword">bool</span> <span>ShavedTheirNuts</span><span class="delimiter">;</span>
 <span class="delimiter">}</span>
 </span></code></pre>
                                     </div>
 
                                     <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Properties</h1>
+
                                     <div class="language-csharp">
                                         <span class="lang">C#</span>
-                                        <pre><code><span class="comment">// BattleBitAPI/Player.cs</span>
-<span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span><span class="delimiter">;</span>
-<span class="keyword">using</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Server</span><span class="delimiter">;</span>
-<span class="keyword">using</span> <span>System</span><span class="delimiter">.</span><span>Numerics</span><span class="delimiter">;</span>
-
-<span class="keyword">namespace</span> <span class="class">BattleBitAPI</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public class</span> <span class="class">Player</span>
-    <span class="delimiter">{</span>
-        <span class="keyword">public</span> <span class="builtin">ulong</span> <span>SteamID</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-        <span class="keyword">public</span> <span class="builtin">string</span> <span>Name</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-        <span class="keyword">public</span> <span class="class">GameServer</span> <span>GameServer</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-        <span class="keyword">public</span> <span class="class">GameRole</span> <span>Role</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-        <span class="keyword">public</span> <span class="class">Team</span> <span>Team</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-        <span class="keyword">public</span> <span class="class">Squads</span> <span>Squad</span> <span class="delimiter">{</span> <span class="builtin">get</span><span class="delimiter">;</span> <span class="builtin">internal set</span><span class="delimiter">;</span> <span class="delimiter">}</span>
-    
-        <span class="keyword">internal virtual void</span> <span class="method">OnInitialized</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-
-        <span class="delimiter">}</span>
-
-        <span class="keyword">public void</span> <span class="method">Kick</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">reason</span> <span class="operator">=</span> <span class="string">""</span><span class="delimiter">)</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">Kick</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">,</span> <span class="param">reason</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">Kill</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">Kill</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">ChangeTeam</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">ChangeTeam</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">KickFromSquad</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">KickFromSquad</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">DisbandTheSquad</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">DisbandPlayerCurrentSquad</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">PromoteToSquadLeader</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">PromoteSquadLeader</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">,</span> <span class="param">msg</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">Message</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">MessageToPlayer</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">,</span> <span class="param">msg</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">SetNewRole</span><span class="delimiter">(</span><span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">this</span><span class="delimiter">.</span><span>GameServer</span><span class="delimiter">.</span><span class="method">SetRoleTo</span><span class="delimiter">(</span><span class="keyword">this</span><span class="delimiter">,</span> <span class="param">role</span><span class="delimiter">);</span>
-        <span class="delimiter">}</span>
-        <span class="keyword">public void</span> <span class="method">Teleport</span><span class="delimiter">(</span><span class="builtin">Vector3</span> <span class="param">target</span><span class="delimiter">)</span>
-        <span class="delimiter">{</span>
-            <span class="comment">// nothin yet</span>
-        <span class="delimiter">}</span>
-
-        <span class="keyword">public override</span> <span class="builtin">string</span> <span class="method">ToString</span><span class="delimiter">()</span>
-        <span class="delimiter">{</span>
-            <span class="keyword">return this</span><span class="delimiter">.</span><span>Name</span> <span class="operator">+</span> <span class="string">" ("</span> <span class="operator"> + </span> <span class="builtin">this</span><span class="delimiter">.</span><span>SteamID</span> <span class="operator">+</span> <span class="string">")"</span><span class="delimiter">;</span>
-        <span class="delimiter">}</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span></code></pre>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">ulong</span> <span>SteamID</span>
+</code></pre>
                                     </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>Name</span>
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">GameServer</span> <span>GameServer</span>
+<span class="comment">// The players <a href="./game-server.html">GameServer</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">GameRole</span> <span>Role</span>
+<span class="comment">// The players <a href="./game-role.html">GameRoles</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">Team</span> <span>Team</span>
+<span class="comment">// The players <a href="./team.html">Team</a></span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">Squads</span> <span>Squad</span>
+<span class="comment">// The players <a href="./squads.html">Squad</a></span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Methods</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Kick</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">reason</span> <span class="operator">=</span> <span class="string">""</span><span class="delimiter">)</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Kill</span><span class="delimiter">()</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">ChangeTeam</span><span class="delimiter">()</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">KickFromSquad</span><span class="delimiter">()</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">DisbandTheSquad</span><span class="delimiter">()</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">PromoteToSquadLeader</span><span class="delimiter">()</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Message</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>                          
+</code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">SetNewRole</span><span class="delimiter">(</span><span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span>                          
+<span class="comment">// Sets the players <a href="./game-role.html">GameRole</a></span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Teleport</span><span class="delimiter">(</span><span class="builtin">Vector3</span> <span class="param">target</span><span class="delimiter">)</span>                          
+</code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Events</h1>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">internal virtual void</span> <span class="method">OnInitialized</span><span class="delimiter">()</span>                                
+<span class="comment">// Currently does nothing</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Overrides</h1>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public override</span> <span class="builtin">string</span> <span class="method">ToString</span><span class="delimiter">()</span>                                
+<span class="comment">// >> PlayerName (SteamID)</span>
+<span class="comment">// >> LILI (210052019510)</span></code></pre>
+                                    </div>
+                                    
                                 </main>
                                 <footer class="doc-footer">
                                     <div class="prev-next">

@@ -212,19 +212,234 @@
                                     <p>The game server class.</p>
 
                                     <hr>
-                                    <h1>Usage</h1>
-
-                                    <p>There should be no reason to use this in your Program.cs</p>
-
-                                    <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Properties</h1>
 
                                     <div class="language-csharp">
                                         <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">TcpClient</span> <span>Socket</span></code></pre>
+                                    </div>
 
-                                        <pre><code><span class="comment">// There is no fucking way I am retyping 424 lines of code into the correct syntax color</span>
-<span class="comment">// https://github.com/MrOkiDoki/BattleBit-Community-Server-API/blob/main/BattleBitAPI/Server/GameServer.cs</span>
-<span class="comment">// Once I get an automatic syntax highlighter working I'll add this</span></code></pre>
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">ulong</span> <span>ServerHash</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">bool</span> <span>IsConnected</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">IPAddress</span> <span>GameIP</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">int</span> <span>GamePort</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">bool</span> <span>IsPasswordProtected</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>ServerName</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>Gamemode</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>Map</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">MapSize</span> <span>MapSize</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">MapDayNight</span> <span>DayNight</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">int</span> <span>CurrentPlayers</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">int</span> <span>InQueuePlayers</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">int</span> <span>MaxPlayers</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>LoadingScreenText</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>ServerRulesText</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Methods</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">SetNewPassword</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">newPassword</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">SetPingLimit</span><span class="delimiter">(</span><span class="builtin">int</span> <span class="param">newPing</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">AnnounceShort</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">AnnounceLong</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">UILogOnServer</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">,</span> <span class="builtin">float</span> <span class="param">messageLifetime</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+             
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">ForceStartGame</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+             
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">ForceEndGame</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">SayToChat</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+             
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">StopServer</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+             
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">CloseServer</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+             
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">KickAllPlayers</span><span class="delimiter">()</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Kick</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">reason</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Kick</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">reason</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Kill</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">Kill</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">ChangeTeam</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">ChangeTeam</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">KickFromSquad</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">KickFromSquad</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">DisbandPlayerSSquad</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">DisbandPlayerCurrentSquad</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">MessageToPlayer</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">MessageToPlayer</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">SetRoleTo</span><span class="delimiter">(</span><span class="builtin">ulong</span> <span class="param">steamID</span><span class="delimiter">,</span> <span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                        <pre><code><span class="keyword">public void</span> <span class="method">SetRoleTo</span><span class="delimiter">(</span><span class="class">Player</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Overrides</h1>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public override</span> <span class="builtin">string</span> <span class="method">ToString</span><span class="delimiter">()</span>                                
+<span class="comment">// >> GameIP : GamePort - ServerName</span>
+<span class="comment">// >> 192.0.1.246 : 19132 - John's Server</span></code></pre>
                                     </div>
                                 </main>
                                 <footer class="doc-footer">

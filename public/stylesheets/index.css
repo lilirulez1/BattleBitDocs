@@ -145,7 +145,15 @@ p {
     overflow-wrap: break-word;
 }
 
-.language-csharp {
+.language-enum > pre > code {
+    padding: 10px 12px;
+}
+
+.language-enum {
+    margin: 8px 0 !important;
+}
+
+.language-csharp, .language-enum {
     border-radius: 8px;
     background-color: var(--mantle);
     margin: 16px 0;

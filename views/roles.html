@@ -210,29 +210,29 @@
                                 <main class="doc-main">
                                     <h1>Roles</h1>
 
-                                    <p>Used in <a href="./player-stats.html">Player Stats</a>.</p>
+                                    <p>Used in the <a href="./player-stats.html">Player Stats</a> class.</p>
 
                                     <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Enum Types</h1>
 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">None</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
+                                    </div>
 
-                                        <pre><code><span class="comment">// BattleBitAPI/Common/Enums/Roles.cs</span>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Admin</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"><<</span> <span class="number">0</span></code></pre>
+                                    </div>
 
-<span class="keyword">namespace</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public enum</span> <span class="class">Roles</span> <span class="delimiter">:</span> <span class="builtin">ulong</span>
-    <span class="delimiter">{</span>
-        <span class="class">None</span> <span class="operator">=</span> <span class="number">0</span><span class="delimiter">,</span>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Moderator</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"><<</span> <span class="number">1</span></code></pre>
+                                    </div>
 
-        <span class="class">Admin</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"> << </span> <span class="number">0</span><span class="delimiter">,</span>
-        <span class="class">Moderator</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"> << </span> <span class="number">1</span><span class="delimiter">,</span>
-        <span class="class">Special</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"> << </span> <span class="number">2</span><span class="delimiter">,</span>
-        <span class="class">Vip</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"> << </span> <span class="number">3</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Special</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"><<</span> <span class="number">2</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Vip</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator"><<</span> <span class="number">3</span></code></pre>
                                     </div>
                                 </main>
                                 <footer class="doc-footer">

@@ -210,56 +210,34 @@
                                 <main class="doc-main">
                                     <h1>Game Role</h1>
 
-                                    <p>Used in <a href="./player.html">Player</a>.</p>
-                                    <p>Also used in the <a href="./onPlayerChangedRole.html">OnPlayerChangedRole</a> and <a href="./onPlayerRequestingToChangeRole .html">OnPlayerRequestingToChangeRole</a> callback.</p>
-                                    <hr>
-                                    <h1>Usage</h1>
-
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">private static async Task</span> <span class="function">OnPlayerChangedRole</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span>
-<span class="delimiter">{</span>
-
-<span class="delimiter">}</span>
-</code></pre>
-                                    </div>
-
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">private static async Task</span> <span class="function">OnPlayerRequestingToChangeRole</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span>
-<span class="delimiter">{</span>
-    <span class="comment">// return true | false;</span>
-<span class="delimiter">}</span>
-</code></pre>
-                                    </div>
+                                    <p>Used in the <a href="./player.html">Player</a> class.</p>
+                                    <p>Also used in OnPlayerRequestingToChangeRole and OnPlayerChangedRole event.</p>
 
                                     <hr>
-                                    <h1>Source Code</h1>
+                                    <h1>Enum Types</h1>
 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Assault</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
+                                    </div>
 
-                                        <pre><code><span class="comment">// BattleBitAPI/Common/Enums/GameRoles.cs</span>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Medic</span> <span class="operator">=</span> <span class="number">1</span></code></pre>
+                                    </div>
 
-<span class="keyword">namespace</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public enum</span> <span class="class">GameRole</span>
-    <span class="delimiter">{</span>
-        <span class="class">Assault</span> <span class="operator">=</span> <span class="number">0</span><span class="delimiter">,</span>
-        <span class="class">Medic</span> <span class="operator">=</span> <span class="number">1</span><span class="delimiter">,</span>
-        <span class="class">Support</span> <span class="operator">=</span> <span class="number">2</span><span class="delimiter">,</span>
-        <span class="class">Engineer</span> <span class="operator">=</span> <span class="number">3</span><span class="delimiter">,</span>
-        <span class="class">Recon</span> <span class="operator">=</span> <span class="number">4</span><span class="delimiter">,</span>
-        <span class="class">Leader</span> <span class="operator">=</span> <span class="number">5</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Support</span> <span class="operator">=</span> <span class="number">2</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Engineer</span> <span class="operator">=</span> <span class="number">3</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Recon</span> <span class="operator">=</span> <span class="number">4</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Leader</span> <span class="operator">=</span> <span class="number">5</span></code></pre>
                                     </div>
                                 </main>
                                 <footer class="doc-footer">

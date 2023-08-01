@@ -209,42 +209,21 @@
                             <div class="doc-content-container">
                                 <main class="doc-main">
                                     <h1>Chat Channel</h1>
-
-                                    <p>Parameter in the <a href="./onPlayerTypedMessage.html">OnPlayerTypedMessage</a> callback.</p>
+                                    <p>Used in the OnPlayerTypedMessage event.</p>
 
                                     <hr>
-                                    <h1>Usage</h1>
+                                    <h1>Enum Types</h1>
 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// Program.cs</span>
-
-<span class="keyword">private static async Task</span> <span class="function">OnPlayerTypedMessage</span><span class="delimiter">(</span><span class="class">MyPlayer</span> <span class="param">player</span><span class="delimiter">,</span> <span class="class">ChatChannel</span> <span class="param">channel</span><span class="delimiter">,</span> <span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>
-<span class="delimiter">{</span>
-    
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AllChat</span></code></pre>
                                     </div>
 
-                                    <hr>
-                                    <h1>Source Code</h1>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">TeamChat</span></code></pre>
+                                    </div>
 
-                                    <div class="language-csharp">
-                                        <span class="lang">C#</span>
-
-                                        <pre><code><span class="comment">// BattleBitAPI/Common/Enums/ChatChannel.cs</span>
-
-<span class="keyword">namespace</span> <span>BattleBitAPI</span><span class="delimiter">.</span><span>Common</span>
-<span class="delimiter">{</span>
-    <span class="keyword">public enum</span> <span class="class">ChatChannel</span>
-    <span class="delimiter">{</span>
-        <span class="class">AllChat</span><span class="delimiter">,</span>
-        <span class="class">TeamChat</span><span class="delimiter">,</span>
-        <span class="class">SquadChat</span>
-    <span class="delimiter">}</span>
-<span class="delimiter">}</span>
-</code></pre>
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SquadChat</span></code></pre>
                                     </div>
                                 </main>
                                 <footer class="doc-footer">
