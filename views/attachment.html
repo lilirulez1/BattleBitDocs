@@ -208,92 +208,137 @@
                         <div class="doc-content">
                             <div class="doc-content-container">
                                 <main class="doc-main">
-                                    <h1>Network Communication</h1>
+                                    <h1>Attachment</h1>
 
-                                    <p>Used in the <a href="./server-listener.html">Server Listener</a> and <a href="./game-server.html">Game Server</a> class. I don't really know why you would need this.</p>
+                                    <p>Used in the <a href="./player-loadout.html">Player Loadout</a> class, which is used in the <a href="player-spawn-request.html">Player Spawn Request</a> struct, which is used in the OnPlayerSpawning event.</p>
 
                                     <hr>
-                                    <h1>Enum Types</h1>
-                                    <span class="enum-type builtin">byte</span>
+                                    <h1>Examples</h1>
 
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">None</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
+                                    <p>I'll do this later idc</p>
+
+                                    <hr>
+                                    <h1>Properties</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="builtin">string</span> <span>Name</span>
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">Hail</span> <span class="operator">=</span> <span class="number">1</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">AttachmentType</span> <span>AttachmentType</span>
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">Accepted</span> <span class="operator">=</span> <span class="number">2</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public</span> <span class="class">GameServer</span> <span>GameServer</span>
+<span class="comment">// The players <a href="./game-server.html">GameServer</a></span></code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">Denied</span> <span class="operator">=</span> <span class="number">3</span></code></pre>
+
+                                    <hr>
+                                    <h1>Methods</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Kick</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">reason</span> <span class="operator">=</span> <span class="string">""</span><span class="delimiter">)</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">ExecuteCommand</span> <span class="operator">=</span> <span class="number">10</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Kill</span><span class="delimiter">()</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SendPlayerStats</span> <span class="operator">=</span> <span class="number">11</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">ChangeTeam</span><span class="delimiter">()</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SpawnPlayer</span> <span class="operator">=</span> <span class="number">12</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">KickFromSquad</span><span class="delimiter">()</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">PlayerConnected</span> <span class="operator">=</span> <span class="number">50</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">DisbandTheSquad</span><span class="delimiter">()</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">PlayerDisconnected</span> <span class="operator">=</span> <span class="number">51</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">PromoteToSquadLeader</span><span class="delimiter">()</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerTypedMessage</span> <span class="operator">=</span> <span class="number">52</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">WarnPlayer</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerKilledAnotherPlayer</span> <span class="operator">=</span> <span class="number">53</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Message</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">msg</span><span class="delimiter">)</span>                          
+</code></pre>
                                     </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">GetPlayerStats</span> <span class="operator">=</span> <span class="number">54</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SavePlayerStats</span> <span class="operator">=</span> <span class="number">55</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerAskingToChangeRole</span> <span class="operator">=</span> <span class="number">56</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerChangedRole</span> <span class="operator">=</span> <span class="number">57</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerJoinedASquad</span> <span class="operator">=</span> <span class="number">58</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerLeftSquad</span> <span class="operator">=</span> <span class="number">59</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerChangedTeam</span> <span class="operator">=</span> <span class="number">60</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerRequestingToSpawn</span> <span class="operator">=</span> <span class="number">61</span></code></pre>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">SetNewRole</span><span class="delimiter">(</span><span class="class">GameRole</span> <span class="param">role</span><span class="delimiter">)</span>                          
+<span class="comment">// Sets the players <a href="./game-role.html">GameRole</a></span></code></pre>
                                     </div>
                                     
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public void</span> <span class="method">Teleport</span><span class="delimiter">(</span><span class="builtin">Vector3</span> <span class="param">target</span><span class="delimiter">)</span>                          
+</code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Events</h1>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">internal virtual void</span> <span class="method">OnInitialized</span><span class="delimiter">()</span>                                
+<span class="comment">// Currently does nothing</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Overrides</h1>
+                                    
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    <pre><code><span class="keyword">public override</span> <span class="builtin">string</span> <span class="method">ToString</span><span class="delimiter">()</span>                                
+<span class="comment">// >> PlayerName (SteamID)</span>
+<span class="comment">// >> LILI (210052019510)</span></code></pre>
+                                    </div>
                                 </main>
                                 <footer class="doc-footer">
                                     <div class="prev-next">
                                         <div class="pager">
-                                            <a href="./team.html" class="pager-link prev">
+                                            <a href="./network-communication.html" class="pager-link prev">
                                                 <span class="desc">
                                                     Previous Page
                                                 </span>
                                                 <span class="title">
-                                                    Team
+                                                    Network Communication
                                                 </span>
                                             </a>
                                         </div>
                                         <div class="pager">
-                                            <a href="./attachments.html" class="pager-link next">
+                                            <a href="./gadgets.html" class="pager-link next">
                                                 <span class="desc">
                                                     Next Page
                                                 </span>
                                                 <span class="title">
-                                                    Attachments
+                                                    Gadgets
                                                 </span>
                                             </a>
                                         </div>

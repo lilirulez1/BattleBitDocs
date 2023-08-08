@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>BattleBit Community API</title>
+        <link rel="stylesheet" href="../public/stylesheets/main.css">
+        <link rel="stylesheet" href="../public/stylesheets/index.css">
+    </head>
+    <body>
+        <div class="app">
+            <div class="page-container">
+                <aside class="sidebar">
+                    <nav class="nav">
+                        <div class="group">
+                            <section class="sidebar-item">
+                                <div class="item">
+                                    <h2 class="item-header">Getting Started</h2>
+                                </div>
+                                <div class="items">
+                                    <div class="item">
+                                        <a class="sidebar-link" href="../index.html">
+                                            <p class="sidebar-text">Introduction</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./prerequisites.html">
+                                            <p class="sidebar-text">Prerequisites</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./installation.html">
+                                            <p class="sidebar-text">Installation</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./quick-start.html">
+                                            <p class="sidebar-text">Quick Start</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="group">
+                            <section class="sidebar-item">
+                                <div class="item">
+                                    <h2 class="item-header">Classes</h2>
+                                </div>
+                                <div class="items">
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player.html">
+                                            <p class="sidebar-text">Player</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./game-server.html">
+                                            <p class="sidebar-text">Game Server</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./server-listener.html">
+                                            <p class="sidebar-text">Server Listener</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="group">
+                            <section class="sidebar-item">
+                                <div class="item">
+                                    <h2 class="item-header">Enums</h2>
+                                </div>
+                                <div class="items">
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./attachment-type.html">
+                                            <p class="sidebar-text">Attachment Type</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./weapon-type.html">
+                                            <p class="sidebar-text">Weapon Type</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./chat-channel.html">
+                                            <p class="sidebar-text">Chat Channel</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./game-role.html">
+                                            <p class="sidebar-text">Game Role</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./map-daynight.html">
+                                            <p class="sidebar-text">Map Day/Night</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./map-size.html">
+                                            <p class="sidebar-text">Map Size</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-spawnpoint.html">
+                                            <p class="sidebar-text">Player Spawning Point</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-stand.html">
+                                            <p class="sidebar-text">Player Stand</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./roles.html">
+                                            <p class="sidebar-text">Roles</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./squads.html">
+                                            <p class="sidebar-text">Squads</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./team.html">
+                                            <p class="sidebar-text">Team</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./network-communication.html">
+                                            <p class="sidebar-text">Network Communication</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="group">
+                            <section class="sidebar-item">
+                                <div class="item">
+                                    <h2 class="item-header">Datasets</h2>
+                                </div>
+                                <div class="items">
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./attachments.html">
+                                            <p class="sidebar-text">Attachments</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./gadgets.html">
+                                            <p class="sidebar-text">Gadgets</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./weapons.html">
+                                            <p class="sidebar-text">Weapons</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="group">
+                            <section class="sidebar-item">
+                                <div class="item">
+                                    <h2 class="item-header">Data</h2>
+                                </div>
+                                <div class="items">
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./attachment.html">
+                                            <p class="sidebar-text">Attachment</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./gadget.html">
+                                            <p class="sidebar-text">Gadget</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./weapon.html">
+                                            <p class="sidebar-text">Weapon</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-loadout.html">
+                                            <p class="sidebar-text">Player Loadout</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-spawn-request.html">
+                                            <p class="sidebar-text">Player Spawn Request</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-stats.html">
+                                            <p class="sidebar-text">Player Stats</p>
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a class="sidebar-link" href="./player-wearing.html">
+                                            <p class="sidebar-text">Player Wearing</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <div class="container">
+                        <div class="doc-content">
+                            <div class="doc-content-container">
+                                <main class="doc-main">
+                                    <h1>Attachments</h1>
+
+                                    <p>Used in the <a href="./player-loadout.html">Player Loadout</a> class, which is used in the <a href="player-spawn-request.html">Player Spawn Request</a> struct, which is used in the OnPlayerSpawning event.</p>
+
+                                    <hr>
+                                    <h1>Examples</h1>
+
+                                    <p>I'll do this later idc</p>
+
+                                    <hr>
+                                    <h1>Public Calls</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    
+                                        <pre><code><span class="keyword">public static</span> <span class="builtin">bool</span> <span class="method">TryFind</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">name</span><span class="delimiter">,</span> <span class="builtin">out</span> <span class="class">Attachment</span> <span class="param">item</span><span class="delimiter">)</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Barrels</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Basic</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Basic</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Compensator</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Heavy</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">LongBarrel</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">MuzzleBreak</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ranger</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SuppressorLong</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SuppressorShort</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Tactical</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FlashHider</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Osprey9</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">DGN308</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">VAMB762</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SDN6762</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">NT4556</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Canted Sights</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Ironsight</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">CantedRedDot</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FYouCanted</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">HoloDot</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Scope</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">_6xScope</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">_8xScope</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">_15xScope</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">_20xScope</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PTR40Hunter</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">_1P78</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Acog</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">M125</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Prisma</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Slip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PistolDeltaSight</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PistolRedDot</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AimComp</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Holographic</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Kobra</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">OKP7</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PKAS</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RedDot</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Reflex</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Strikefire</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Razor</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Flir</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Echo</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">TRI4X32</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FYouSight</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">HoloPK120</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Pistol8xScope</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BurrisAR332</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">HS401G5</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Top Scope</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">DeltaSightTop</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RedDotTop</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">CRedDotTop</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FYouTop</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Under Rails</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AngledGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Bipod</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">VerticalGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">StubbyGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">StabilGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">VerticalSkeletonGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FABDTFG</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">MagpulAngled</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BCMGunFighter</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">ShiftShortAngledGrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SE5Grip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RK6Foregrip</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">HeraCQRFront</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">B25URK</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">VTACUVGTacticalGrip</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Side Rails</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Flashlight</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rangefinder</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Redlaser</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">TacticalFlashlight</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Greenlaser</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Searchlight</span></code></pre>
+                                    </div>
+
+                                    <hr>
+                                    <h1>Bolts</h1>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BoltActionA</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BoltActionB</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BoltActionC</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BoltActionD</span></code></pre>
+                                    </div>
+
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BoltActionE</span></code></pre>
+                                    </div>
+                                </main>
+                                <footer class="doc-footer">
+                                    <div class="prev-next">
+                                        <div class="pager">
+                                            <a href="./network-communication.html" class="pager-link prev">
+                                                <span class="desc">
+                                                    Previous Page
+                                                </span>
+                                                <span class="title">
+                                                    Network Communication
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="pager">
+                                            <a href="./gadgets.html" class="pager-link next">
+                                                <span class="desc">
+                                                    Next Page
+                                                </span>
+                                                <span class="title">
+                                                    Gadgets
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

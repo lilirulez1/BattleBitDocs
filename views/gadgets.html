@@ -208,92 +208,202 @@
                         <div class="doc-content">
                             <div class="doc-content-container">
                                 <main class="doc-main">
-                                    <h1>Network Communication</h1>
+                                    <h1>Gadgets</h1>
 
-                                    <p>Used in the <a href="./server-listener.html">Server Listener</a> and <a href="./game-server.html">Game Server</a> class. I don't really know why you would need this.</p>
+                                    <p>Used in the <a href="./player-loadout.html">Player Loadout</a> class, which is used in the <a href="player-spawn-request.html">Player Spawn Request</a> struct, which is used in the OnPlayerSpawning event.</p>
 
                                     <hr>
-                                    <h1>Enum Types</h1>
-                                    <span class="enum-type builtin">byte</span>
+                                    <h1>Examples</h1>
 
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">None</span> <span class="operator">=</span> <span class="number">0</span></code></pre>
+                                    <p>I'll do this later idc</p>
+
+                                    <hr>
+                                    <h1>Public Calls</h1>
+
+                                    <div class="language-csharp">
+                                        <span class="lang">C#</span>
+                                    
+                                        <pre><code><span class="keyword">public static</span> <span class="builtin">bool</span> <span class="method">TryFind</span><span class="delimiter">(</span><span class="builtin">string</span> <span class="param">name</span><span class="delimiter">,</span> <span class="builtin">out</span> <span class="class">Attachment</span> <span class="param">item</span><span class="delimiter">)</span></code></pre>
                                     </div>
+
+                                    <hr>
+                                    <h1>Gadgets</h1>
+                                    
                                     <div class="language-enum">
-                                        <pre><code><span class="class">Hail</span> <span class="operator">=</span> <span class="number">1</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">Accepted</span> <span class="operator">=</span> <span class="number">2</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">Denied</span> <span class="operator">=</span> <span class="number">3</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">ExecuteCommand</span> <span class="operator">=</span> <span class="number">10</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SendPlayerStats</span> <span class="operator">=</span> <span class="number">11</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SpawnPlayer</span> <span class="operator">=</span> <span class="number">12</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">PlayerConnected</span> <span class="operator">=</span> <span class="number">50</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">PlayerDisconnected</span> <span class="operator">=</span> <span class="number">51</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerTypedMessage</span> <span class="operator">=</span> <span class="number">52</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerKilledAnotherPlayer</span> <span class="operator">=</span> <span class="number">53</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">GetPlayerStats</span> <span class="operator">=</span> <span class="number">54</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">SavePlayerStats</span> <span class="operator">=</span> <span class="number">55</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerAskingToChangeRole</span> <span class="operator">=</span> <span class="number">56</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerChangedRole</span> <span class="operator">=</span> <span class="number">57</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerJoinedASquad</span> <span class="operator">=</span> <span class="number">58</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerLeftSquad</span> <span class="operator">=</span> <span class="number">59</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerChangedTeam</span> <span class="operator">=</span> <span class="number">60</span></code></pre>
-                                    </div>
-                                    <div class="language-enum">
-                                        <pre><code><span class="class">OnPlayerRequestingToSpawn</span> <span class="operator">=</span> <span class="number">61</span></code></pre>
+                                        <pre><code><span class="class">Bandage</span></code></pre>
                                     </div>
                                     
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Binoculars</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RangeFinder</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RepairTool</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">C4</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Claymore</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">M320SmokeGrenadeLauncher</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SmallAmmoKit</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AntiPersonnelMine</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AntiVehicleMine</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">MedicKit</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rpg7HeatExplosive</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">RiotShield</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">FragGrenade</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">ImpactGrenade</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AntiVehicleGrenade</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SmokeGrenadeBlue</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SmokeGrenadeGreen</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SmokeGrenadeRed</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SmokeGrenadeWhite</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Flare</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SledgeHammer</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AdvancedBinoculars</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Mdx201</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">BinoSoflam</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">HeavyAmmoKit</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rpg7Pgo7Tandem</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rpg7Pgo7HeatExplosive</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rpg7Pgo7Fragmentation</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Rpg7Fragmentation</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">GrapplingHook</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">AirDrone</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Flashbang</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">Pickaxe</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SuicideC4</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SledgeHammerSkinA</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SledgeHammerSkinB</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">SledgeHammerSkinC</span></code></pre>
+                                    </div>
+                                    
+                                    <div class="language-enum">
+                                        <pre><code><span class="class">PickaxeIronPickaxe</span></code></pre>
+                                    </div>
                                 </main>
                                 <footer class="doc-footer">
                                     <div class="prev-next">
                                         <div class="pager">
-                                            <a href="./team.html" class="pager-link prev">
+                                            <a href="./attachments.html" class="pager-link prev">
                                                 <span class="desc">
                                                     Previous Page
                                                 </span>
                                                 <span class="title">
-                                                    Team
+                                                    Attachments
                                                 </span>
                                             </a>
                                         </div>
                                         <div class="pager">
-                                            <a href="./attachments.html" class="pager-link next">
+                                            <a href="./weapons.html" class="pager-link next">
                                                 <span class="desc">
                                                     Next Page
                                                 </span>
                                                 <span class="title">
-                                                    Attachments
+                                                    Weapons
                                                 </span>
                                             </a>
                                         </div>
